@@ -1,0 +1,112 @@
+/* Base Container */
+.dashboard-container {
+  /* background-color: #2c3e50; */
+  max-width: 80%;
+  margin: 40px auto;
+  /* padding: 20px; */
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+}
+
+/* Left: User Links */
+.dashboard-left {
+  flex: 1;
+  min-width: 250px;
+}
+
+/* Right: Info + Purchase */
+.dashboard-right {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Cards */
+.dashboard-card {
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 25px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+}
+
+/* .dashboard-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 24px rgba(0,0,0,0.12);
+} */
+
+.dashboard-card h3 {
+  margin-bottom: 15px;
+  color: #2c3e50;
+  font-size: 1.4rem;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 10px;
+}
+
+/* Lists */
+.dashboard-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.dashboard-card li {
+  padding: 10px 0;
+  border-bottom: 1px solid #f1f1f1;
+}
+
+.dashboard-card li:last-child {
+  border-bottom: none;
+}
+
+.dashboard-card a {
+  color: #0077cc;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.dashboard-card a:hover {
+  text-decoration: underline;
+}
+
+/* Purchase History */
+.purchase-item {
+  margin-bottom: 20px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #ddd;
+}
+
+.purchase-product h4 {
+  margin-bottom: 5px;
+  color: #444;
+}
+
+.purchase-product p {
+  margin: 5px 0;
+}
+
+.purchase-product small {
+  color: #888;
+}
+
+.no-history {
+  color: #888;
+  font-style: italic;
+  margin-top: 10px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .dashboard-container {
+    flex-direction: column;
+  }
+
+  .dashboard-left,
+  .dashboard-right {
+    width: 100%;
+  }
+}

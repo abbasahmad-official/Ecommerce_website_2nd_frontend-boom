@@ -1,0 +1,41 @@
+
+.footer{
+    width: 100%;
+    background-color:#ebebeb; 
+    height: 70px;
+    display: flex;
+    align-items: center;
+    /* justify-content: flex-end; */
+}
+.items{
+    width: 80%;
+    /* background-color: aqua; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 auto;
+}
+
+/* color     color: #666; backgrond #ebebeb; */
+
+.items p{
+    color: #666;
+}
+.items p span{
+    color: #0097a8;;
+}
+
+@media (max-width: 600px) {
+  .items {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    /* font-size: 16px; */
+  }
+
+  .payment img {
+    width: 80%;
+    height: auto;
+    margin-top: 10px;
+  }
+}

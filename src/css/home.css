@@ -1,0 +1,218 @@
+.hero{
+    display: flex;
+    justify-content: center;
+    margin: 30px 0;
+    /* z-index: -10; */
+    /* background-color: aqua; */
+}
+
+.poster-image{
+    width: 80%;
+    position: relative;
+    /* z-index: -100; */
+}
+.poster-image img{
+    width: 100%;
+}
+.poster-image .image-text{
+    position: absolute;
+    top: 45%;
+    left: 15%;
+    transform: translate(-50%, -50%);
+}
+/* .poster-image image{
+    width: 100%;
+} */
+
+/* new arrival */
+
+.new-arrival{
+    border: 1px solid #ebebeb;
+    width: 80%;
+    margin: 0 auto;
+    border-top: 2px solid #0097a8;
+    margin-bottom: 25px;
+}
+.new-arrival .new-arrival-header{
+    padding: 10px;
+}
+.new-arrival .new-arrival-product{
+    /* width: 70%; */
+    border: 1px solid rgb(206, 190, 190);
+    /* padding: 8px; */
+
+}
+/*color  #ebebeb; */
+
+.new-arrival-products {
+  display: flex;
+  flex-wrap: wrap;
+  /* gap: 24px; */
+  /* justify-content: center;  */
+  /* padding: 8px; */
+  /* margin: 5px; */
+  /* padding: 5px; */
+}
+/* 
+.new-arrival-product{
+    border-left: none !important;
+    padding: 5px;
+} */
+
+ .product-card{
+    border-left: none !important;
+}
+.product-card:hover {
+  box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+  
+}
+.hero-categories .categories{
+    display: none;
+}
+
+/* slider images css*/
+.poster-image{
+  position: relative;
+  width: 80%;
+  
+}
+.poster-image .image{
+  display: flex;
+transition: transform 0.5s linear;
+width: 100%;
+/* overflow: hidden; */
+
+}
+
+.indicators{
+  position: absolute;
+  bottom:12px;
+  left: 50%;
+  transform: translate(-50%,50%);
+  display: flex;
+  gap: 2.7px;
+}
+.indicators p i {
+  /* color: white; */
+  font-size: 8px;
+  cursor: pointer;
+}
+.img.img-hide{
+  /* display: none; */
+ opacity: 0;
+  /* transform: translateX(15%); */
+  /* visibility: hidden; */
+  /* transition: all .1s linear; */
+  pointer-events: none;
+}
+.img{
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+
+
+
+.indicator{
+cursor: pointer;
+}
+.indicator i{
+  color: white;
+}
+.indicator.indicator-not-active i{
+  color: gray;
+}
+
+
+
+
+
+@media screen and (max-width: 768px) {
+  .hero-categories .categories{
+    display: block;
+    /* background-color: white; */
+    /* height: 10px !important; */
+  }
+  .hero-categories{
+      margin: 0px auto;
+      width: 80%;
+    background-color: aquamarine;
+      /* display: flex; */
+    /* align-items: center; */
+  }
+  .hero-categories .categories{
+    max-width:100%;
+    position: relative;
+  }
+  .hero-categories .categories .category-button{
+    background-color: rgb(42, 245, 245);
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin: 0 auto;
+    background-color: black;
+    color: white;
+    padding: 10px 0px;
+    max-width: 100% ;
+    /* position: absolute;
+    top: 100%; */
+    
+  }
+  
+.hero-categories ul{
+  position: absolute;
+  color: black; /* ✅ Change from white to black */
+  background-color: white;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  transform: translateY(-10px);
+  pointer-events: none;
+  height: auto !important;
+
+}
+.hero-categories ul li:hover{
+  background-color: rgb(227, 226, 226) !important;
+}
+.hero-categories .show-dropdown-mobile{
+opacity: 1;
+transform: translateY(0px);
+visibility: visible;
+pointer-events: all;
+}
+
+
+}
+
+/* remaining css */
+
+.category-name{
+  width: 80%;
+  /* padding-left: 20px; */
+  margin: 20px auto;
+  /* margin-top: 20px; */
+  margin-bottom: 50px;
+}
+
+.product-card{
+  border: none !important;
+}
+
+.product-card .product-title:hover{
+  color: #0097a8;
+  
+}
+
+/* general container */
+.product-by-category{
+  min-height: 100vh !important;
+}
+
+.search-link{
+  text-decoration: none !important;
+}
+/* .product-by-category Link{
+  text-decoration: none !important;
+  color: blue !important;
+} */

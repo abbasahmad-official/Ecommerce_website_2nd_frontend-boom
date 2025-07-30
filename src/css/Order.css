@@ -1,0 +1,90 @@
+.orders-layout {
+    padding: 2rem;
+    font-family: 'Arial', sans-serif;
+}
+
+.orders-container {
+    max-width: 900px;
+    margin: auto;
+}
+
+.orders-title {
+    color: #c0392b;
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.order-card {
+    border-bottom: 4px solid indigo;
+    padding: 1rem 0;
+    margin-bottom: 2rem;
+}
+
+.order-id {
+    background-color: #3498db;
+    color: white;
+    padding: 0.5rem;
+    font-size: 1.2rem;
+}
+
+.order-details p {
+    margin: 0.5rem 0;
+}
+
+.status-box {
+    margin-bottom: 1rem;
+}
+
+.status-box select {
+    padding: 0.4rem;
+    margin-top: 0.5rem;
+}
+
+.product-card {
+    border: 1px solid indigo;
+    padding: 1rem;
+    margin-bottom: 1rem;
+}
+
+.input-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+
+.input-label {
+    width: 150px;
+    font-weight: bold;
+}
+
+.readonly-input {
+    flex: 1;
+    padding: 0.4rem;
+    border: 1px solid #ccc;
+    background-color: #f8f8f8;
+}
+
+.back-link {
+    display: block;
+    margin-top: 2rem;
+    color: #2980b9;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.back-link:hover {
+    text-decoration: underline;
+}
+
+.orders-container{
+    /* padding: 20px; */
+    border: 1px solid black;
+}
+
+.orders-container .product-card{
+    margin: 10px;
+}
+.order-card .order-id {
+    margin-bottom: 10px !important;
+    margin-top: 0px !important;
+}
