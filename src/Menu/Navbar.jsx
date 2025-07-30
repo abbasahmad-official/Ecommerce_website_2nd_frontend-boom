@@ -138,7 +138,7 @@ const Navbar = () => {
 
           {/* Logo */}
           <Link to={"/"}> <div className="img logo">
-            <img src="/src/assets/boom-logo.jpg" alt="logo" />
+            <img src="/assets/boom-logo.jpg" alt="logo" />
           </div>
           </Link>
 
@@ -146,7 +146,7 @@ const Navbar = () => {
           <div className="cart">
             <div className="cart-image">
               <Link to="/cart" className="cart-icon-wrapper">
-                <img width="24px" src="/src/assets/icons8-fast-cart-50.png" alt="cart-icon" />
+                <img width="24px" src="/assets/icons8-fast-cart-50.png" alt="cart-icon" />
                 {/* <div className="item-count-badge" style={{display:showMobileMenu ? "block" : "none"  }}><p>1</p></div> */}
               </Link>
             </div>
