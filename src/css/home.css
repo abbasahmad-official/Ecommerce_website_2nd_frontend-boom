@@ -216,9 +216,26 @@ pointer-events: all;
   text-decoration: none !important;
   color: blue !important;
 } */
-@media  (max-width: 768px) {
-  .product-card-content{
-  width: 50%;
+
+@media (max-width: 375px) {
+  .responsive-image {
+    /* height: 100% !important; Or smaller if you prefer */
+    width: 80% !important;
+    object-fit: contain;
+    /* display: none; */
+  }
+  .responsive-image img{
+    width: 100% !important;
+    object-fit: contain !important;
+  }
+.product-card{
+
 }
+  .product-card .product-card-content{
+ /* width: 100% !important; */
+ width: 50% !important;
+ /* background-color: aqua; */
+ /* display: none; */
+  }
 }
 
