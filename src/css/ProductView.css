@@ -3,7 +3,7 @@
 }
 
 .product-view-container {
-  min-height: 100vh;
+  min-height: 140vh !important;
   padding: 10px;
   /* width: 100vw; */
 }
