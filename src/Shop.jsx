@@ -53,7 +53,13 @@ const Shop = () => {
   const handleResize = () => {
     const mobile = window.innerWidth <= 768;
     setIsMobile(mobile);
-    setShowFilters(!mobile); // show filters by default on desktop
+    // setShowFilters(!mobile); // show filters by default on desktop
+  // Only update showFilters if switching between mobile <-> desktop
+  setShowFilters(prev => {
+    if (mobile && !isMobile) return false;       // switched to mobile
+    if (!mobile && isMobile) return true;        // switched to desktop
+    return prev;                                  // no change
+  });
   };
 
   useEffect(() => {
