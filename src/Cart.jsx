@@ -226,7 +226,7 @@ const Cart = () => {
                       onChange={handleChange(item._id)}
                     />
                     <p className='price'>${item.price * item.count}</p>
-                    <img className='dustbin' width={20} src="/src/assets/dustbin.png" alt="remove-item" onClick={() => removeCartItem(item._id)} />
+                    <img className='dustbin' width={20} src="/assets/dustbin.png" alt="remove-item" onClick={() => removeCartItem(item._id)} />
                   </div>
                 ))}
               </div>

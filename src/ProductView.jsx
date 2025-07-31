@@ -3,6 +3,7 @@ import {data, Link, useParams} from "react-router-dom";
 import {read} from "./api/apiCore"
 import ShowImage from './ShowImage';
 import "../src/css/ProductView.css"
+import AddToCart from './AddToCart';
 const ProductView = () => {
     const { productId } = useParams();
     const [error, setError] = useState(false);
@@ -43,7 +44,8 @@ useEffect(()=>{
                             defaultValue="1"
                         />
                     </div>
-                    <button className='add-to-cart'><i className="fa-solid fa-cart-shopping"></i> ADD TO CART</button>
+                   <AddToCart product={product} className='add-to-cart'/>
+                    {/* <button className='add-to-cart'><i className="fa-solid fa-cart-shopping"></i> ADD TO CART</button> */}
                 </div>
             </div>
             <div className="product-description">

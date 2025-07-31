@@ -6,7 +6,7 @@ import { setCartMenuValue } from './redux/slices/cartSlicer';
 
 import {addItem} from "./cartHelpers"
 
-const AddToCart = ({product}) => {
+const AddToCart = ({product, className= ""}) => {
   const dispatch = useDispatch();
 
 
@@ -20,7 +20,7 @@ const AddToCart = ({product}) => {
   }
   return (
     <Fragment>
-    <button className="product-button" onClick={addToCart}>Add to Cart</button>
+    <button className={`product-button ${className}`} onClick={addToCart}>Add to Cart</button>
     {/* <ToastContainer position="top-center" autoClose={2000} /> */}
     </Fragment>
   )

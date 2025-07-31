@@ -177,7 +177,7 @@ const Navbar = () => {
                 ))}
               </select>
               <button className="search-button" type='submit'>
-                <img width="24" src="/src/assets/icons8-search-50.png" alt="search" />
+                <img width="24" src="/assets/icons8-search-50.png" alt="search" />
               </button>
             </div>
           </div>
@@ -252,7 +252,7 @@ const Navbar = () => {
             </div>
           </div>
           <div className='sticky-search'>
-          <img width="24" height="24" src="/src/assets/icons8-search-50.png" alt="search" onClick={() => setShowSearchIcon(!showSearchIcon)} />
+          <img width="24" height="24" src="/assets/icons8-search-50.png" alt="search" onClick={() => setShowSearchIcon(!showSearchIcon)} />
           
           {showSearchIcon &&  <form onSubmit={searchSubmit}>
           <div className="search-bar-wrapper">
