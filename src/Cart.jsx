@@ -149,6 +149,8 @@ const Cart = () => {
       console.log("cod");
       await paymentByCod();
       emptyCart();
+      setCart([]);
+      // dispatch(setCartMenuValue(0));
     }
     if (paymentMethod === "stripe" && data.name && data.address && data.phone_no) {
       console.log("stripe");
@@ -162,6 +164,7 @@ const Cart = () => {
       createOrder(userId, userToken, orderData)
         .then(() => {
           console.log("order created");
+          setData({...data, name:"", address:"", phone_no:""});
         })
         .catch((err) => {
           console.error("order creation error by cod:", err);
