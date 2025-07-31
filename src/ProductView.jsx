@@ -25,7 +25,7 @@ useEffect(()=>{
 
 
     return (
-        <div className='container'>
+        <div className='product-view-container'>
             <div className='prodcut-view-page'>
             <div className="product-view">
                 {/* <p className='pro'>this is product view</p> */}
