@@ -8,6 +8,7 @@ import { setCartMenuValue } from './redux/slices/cartSlicer';
 import { getStripeCheckout, createOrder } from "./api/apiCore";
 import { isAuthenticated } from "./auth/index";
 import { loadStripe } from '@stripe/stripe-js';
+import { ToastContainer, toast } from 'react-toastify';
 const stripePromise = loadStripe(import.meta.env.VITE_STRIPE_PUBLISHABLE_KEY);
 
 const Cart = () => {
@@ -150,6 +151,13 @@ const Cart = () => {
       await paymentByCod();
       emptyCart();
       setCart([]);
+      toast.success("Your order has been placed.");
+      setTimeout(() => {
+        // toast.success(message);
+        window.location.reload();
+      
+      // localStorage.removeItem("orderSuccess");
+    }, 1000);
       // dispatch(setCartMenuValue(0));
     }
     if (paymentMethod === "stripe" && data.name && data.address && data.phone_no) {
