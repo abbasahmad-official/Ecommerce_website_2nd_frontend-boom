@@ -46,7 +46,7 @@
   background-color: #1a5fb4;
 }
 @media (max-width: 768px) {
-  .product-card{
-    width: ;
+  .product-img{
+    width: 50%;
   }
 }
