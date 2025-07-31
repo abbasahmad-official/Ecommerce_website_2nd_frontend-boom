@@ -267,7 +267,7 @@ const Cart = () => {
             <div className={`cart-info-block ${isProceed ? "hide" : "active"}`}>
               <div className={`block-row ${isProceed ? "hide" : "active"}`}>
                 {isAuthenticated() ? (
-                  <button onClick={proceedCheckout} disabled={isProceed}>PROCEED TO CHECKOUT</button>
+                  <button onClick={proceedCheckout} disabled={cart.length == 0}>PROCEED TO CHECKOUT</button>
                 ) : (
                   <button onClick={() => navigate("/signin")} disabled={isProceed}>Sign in</button>
                 )}
