@@ -228,12 +228,12 @@ pointer-events: all;
     width: 100% !important;
     object-fit: contain !important;
   }
-.product-card{
+/* .product-card{
 
-}
+} */
   .product-card .product-card-content{
  /* width: 100% !important; */
- width: 50% !important;
+ width: 70% !important;
  /* background-color: aqua; */
  /* display: none; */
   }
