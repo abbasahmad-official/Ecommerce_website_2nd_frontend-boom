@@ -237,5 +237,12 @@ pointer-events: all;
  /* background-color: aqua; */
  /* display: none; */
   }
+  .new-arrival-header h2{
+    font-size: 14px;
+  }
+  .new-arrival-header h3{
+    font-size: 14px;
+  }
+
 }
 

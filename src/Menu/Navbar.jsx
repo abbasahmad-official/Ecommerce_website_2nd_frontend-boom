@@ -164,7 +164,7 @@ const Navbar = () => {
         <form onSubmit={searchSubmit}>
           <div className="search-bar-wrapper">
             <div className="search-bar">
-              <input type="text" placeholder="Search..." className="search-input" onChange={handleChange("search")} value={data.search} />
+              < input id='search' type="text" placeholder="Search..." className="search-input" onChange={handleChange("search")} value={data.search} />
               <select className="search-select"
                 onChange={handleChange("category")}
                 value={data.category}

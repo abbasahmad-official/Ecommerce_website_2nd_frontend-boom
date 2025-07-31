@@ -420,3 +420,46 @@ img{
   align-items: center;
   justify-content: center;
 }
+
+@media screen and (max-width: 390px) {
+  .search-bar-wrapper{
+    background-color: #0097a8;
+    border: none !important;
+     box-shadow: none !important;
+  }
+  .search-bar {
+    flex-direction: column;
+    min-height: 100px;
+    gap: 5px;
+    padding: 5px;
+    background-color: #0097a8;
+    border: none !important;
+    box-shadow: none !important;
+  }
+
+  
+  /* .search-input,
+  .search-select,
+  .search-button {
+    width: 100%;
+    font-size: 14px;
+    height: 36px;
+  } */
+   #search{
+  max-height: 26px !important;
+  /* font-size: 14px !important; */
+  /* display: none; */
+}
+ .search-select,
+  .search-button {
+    width: 100%;
+    font-size: 14px;
+    height: 26px;
+  } 
+
+
+
+  .search-bar-wrapper {
+    padding: 5px;
+  }
+}
