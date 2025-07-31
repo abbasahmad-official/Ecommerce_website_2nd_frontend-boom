@@ -216,3 +216,9 @@ pointer-events: all;
   text-decoration: none !important;
   color: blue !important;
 } */
+@media  (max-width: 768px) {
+  .product-card-content{
+  width: 50%;
+}
+}
+
