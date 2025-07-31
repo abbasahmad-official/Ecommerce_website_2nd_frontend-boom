@@ -8,7 +8,7 @@ const footer = () => {
        <div className='items'>
         <p>Copyright &copy; {new Date().getFullYear()} by <span>Abbas</span>. All Rigths Reserved</p>
         <div className="payment">
-         <img src="/src/assets/payment_right.png" alt="payment-cards" />
+         <img src="/assets/payment_right.png" alt="payment-cards" />
         <div className='scroll-up'></div>
         </div>
        </div> 
