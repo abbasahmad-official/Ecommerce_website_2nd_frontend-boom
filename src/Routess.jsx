@@ -15,6 +15,7 @@ import PrivateRoute from './auth/PrivateRoute';
 import AdminRoute from './auth/AdminRoute';
 import Profile from './user/Profile';
 import ProductsByCategory from './ProductsByCategory';
+import Success from './Success';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
@@ -29,6 +30,7 @@ const Routess = () => {
             <Route path='/cart' element={<Cart />} />
             <Route path='/product/:productId' element={<ProductView />} />
             <Route path='/category/:categoryId' element={<ProductsByCategory />} />
+            <Route path='/success' element={<Success />} />
             <Route path='/shop' element={<Shop />} />
             <Route path='/search' element={<Search />} />
             <Route path='/signup' element={<Signup />} />
