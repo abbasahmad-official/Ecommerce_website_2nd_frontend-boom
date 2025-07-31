@@ -47,6 +47,6 @@
 }
 @media (max-width: 768px) {
   .product-img{
-    width: 50%;
+    width: 50% !important;
   }
 }
