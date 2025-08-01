@@ -88,3 +88,60 @@
     margin-bottom: 10px !important;
     margin-top: 0px !important;
 }
+
+@media(max-width: 768px) {
+  .orders-container {
+    padding: 1rem;
+    border: none; /* optional, to save space */
+  }
+
+  .order-card {
+    padding: 0.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .order-id {
+    font-size: 1rem;
+    padding: 0.3rem;
+  }
+
+  .order-details p {
+    font-size: 0.9rem;
+    margin: 0.3rem 0;
+  }
+
+  .status-box {
+    margin-bottom: 1rem;
+  }
+
+  .status-box select {
+    width: 100%;
+    padding: 0.5rem;
+    font-size: 1rem;
+  }
+
+  .product-card {
+    margin: 0.5rem 0;
+    padding: 0.7rem;
+    display: flex;
+    flex-wrap:wrap;
+    
+  }
+
+  .input-row {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 0.6rem;
+  }
+
+  .input-label {
+    width: 100%;
+    margin-bottom: 0.2rem;
+    font-weight: 600;
+  }
+
+  .readonly-input {
+    width: 100%;
+    box-sizing: border-box;
+  }
+}
