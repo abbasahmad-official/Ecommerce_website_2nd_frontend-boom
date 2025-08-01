@@ -153,8 +153,8 @@ const Navbar = () => {
             <div className="cart-data">
               <div className="item-count-badge"><p>{menuCount}</p></div>
               <div className="cart-total">
-                <h5>CART:</h5>
-                <p>Price: $30</p>
+                {/* <h5>CART:</h5> */}
+                {/* <p>Price: $30</p> */}
               </div>
             </div>
           </div>
