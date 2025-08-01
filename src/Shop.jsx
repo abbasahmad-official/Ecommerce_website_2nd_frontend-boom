@@ -109,7 +109,10 @@ const Shop = () => {
     setCurrentPage(selected + 1);
   }
 
-
+ const clearFilter = () => {
+            setMyFilters({ filters: { category: [], price: [] } });
+            loadProducts(0, limit, {});
+    }
 
   return (
     <div className='shop-container-large'>
@@ -128,8 +131,19 @@ const Shop = () => {
             <div className="filter-selection-header">
               <h3>FILTER SELECTION </h3>
             </div>
-            <Checkbox categories={categories} handleFilters={filters => (handleFilters(filters, "category"))} />
-            <Radiobox prices={prices} handleFilters={filters => (handleFilters(filters, "price"))} />
+            <div className="clear-btn">
+            <button onClick={clearFilter} >x clear all</button>
+            </div>
+            <Checkbox 
+             categories={categories}
+             handleFilters={filters => (handleFilters(filters, "category"))}
+            selectedCategories={myFilters.filters.category}
+            />
+            <Radiobox 
+            selectedPrice={myFilters.filters.price}
+            prices={prices}
+             handleFilters={filters => (handleFilters(filters, "price"))} 
+             />
             {/* <div className="filter-selection-box">
               <h4 id='price'>Price</h4>
               <div className="checkbox">

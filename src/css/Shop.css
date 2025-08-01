@@ -31,8 +31,30 @@
     /* background-color: aqua; */
 
 }
-
+.filter-selection > .clear-btn{
+/* border-top: 0px solid black; */
+border-left: 1px solid black;
+border-right: 1px solid black;
+width: 100%;
+display: flex;
+justify-content: center;
+}
+.filter-selection > .clear-btn > button {
+  width: fit-content;
+  padding: 7px;
+  background-color: rgb(43, 40, 40);
+  color: white;
+  border-radius: 5px;
+  margin: 5px 0px;
+  cursor: pointer;
+  
+  /* margin: 0 auto !important; */
+  /* margin-top: 10px; */
+}
  
+.filter-selection > .clear-btn > button:hover{
+  background-color: black;
+}
 
 .filter-selection-header h3{
     background-color: #0097a8;

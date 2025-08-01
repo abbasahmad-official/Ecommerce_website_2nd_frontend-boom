@@ -1,11 +1,11 @@
 import React, { Fragment, useState } from 'react'
 
-const Radiobox = ({prices, handleFilters}) => {
+const Radiobox = ({prices, handleFilters, selectedPrice}) => {
     const [value, setValue] = useState(0)
 
     const handleChange = (event) => {
         handleFilters(event.target.value);
-        setValue(event.target.value)
+        // setValue(event.target.value)
         // 
     }
     return (
@@ -15,7 +15,9 @@ const Radiobox = ({prices, handleFilters}) => {
            
             <div className="checkbox" key={i}>
                 <input type="radio" 
-                defaultChecked={i===0}
+               checked={selectedPrice.length === 0 ? (price._id === 0) : selectedPrice[0] === price.array[0]}
+              // checked={selectedPrice.length && selectedPrice[0] === price.array[0]} // compare arrays by first value
+                // defaultChecked={selectedPrice.length===0}
                 name={"price"}
                 onChange={handleChange}
                 value={`${price._id}`}

@@ -1,13 +1,13 @@
 import React, {useState} from 'react'
 
 
-const Checkbox = ({ categories, handleFilters }) => {
+const Checkbox = ({ categories, handleFilters, selectedCategories }) => {
 
     const [checked, setChecked] = useState([]);
 
     const handleChange  = (c) => () => {
-        const currentCategoryId =  checked.indexOf(c);
-        const newCheckedCategoryId = [...checked];
+        const currentCategoryId =  selectedCategories.indexOf(c);
+        const newCheckedCategoryId = [...selectedCategories];
 
         if(currentCategoryId === -1){
             newCheckedCategoryId.push(c)
@@ -21,11 +21,13 @@ const Checkbox = ({ categories, handleFilters }) => {
 
     return (
         <div className="filter-selection-box">
-            <button>x clear all</button>
+            
             <h4>Categories</h4>
             {categories.map((category,i) => (
                 <div className="checkbox" key={i}>
-                <input type="checkbox" onChange={handleChange(category._id)}/>
+                <input type="checkbox" 
+                checked={selectedCategories.includes(category._id)}
+                onChange={handleChange(category._id)}/>
                 <p>{category.name}</p>
             </div>
         ))}
