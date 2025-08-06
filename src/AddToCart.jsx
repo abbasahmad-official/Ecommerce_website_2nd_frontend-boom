@@ -1,12 +1,12 @@
-import React, { Fragment, useEffect, useState } from 'react'
+import React, { Fragment, useLayoutEffect, useState } from 'react';
 import { toast } from 'react-toastify';
-import { useSelector, useDispatch } from "react-redux";
-import { getCart, itemTotal, addItem } from "./cartHelpers";
+import { useDispatch } from 'react-redux';
+import { itemTotal, addItem } from './cartHelpers';
 import { setCartMenuValue } from './redux/slices/cartSlicer';
 
-const AddToCart = ({ product, className = "" }) => {
+const AddToCart = ({ product, className = '' }) => {
   const dispatch = useDispatch();
-  const [isMobile, setIsMobile] = useState(false); // ✅ moved to top level
+  const [isMobile, setIsMobile] = useState(false); // default to false
 
   const addToCart = () => {
     addItem(product, () => {
@@ -16,25 +16,31 @@ const AddToCart = ({ product, className = "" }) => {
     });
   };
 
-useEffect(() => {
-  const checkIsMobile = () => {
-    if (typeof window !== "undefined") {
+  useLayoutEffect(() => {
+    if (typeof window === 'undefined') return;
+
+    const checkIsMobile = () => {
       setIsMobile(window.innerWidth < 768);
-    }
-  };
+    };
 
-  checkIsMobile(); // run once on mount
-  window.addEventListener('resize', checkIsMobile);
+    checkIsMobile(); // run immediately before paint
+    window.addEventListener('resize', checkIsMobile);
 
-  return () => {
-    window.removeEventListener('resize', checkIsMobile);
-  };
-}, []); 
+    return () => {
+      window.removeEventListener('resize', checkIsMobile);
+    };
+  }, []);
 
   return (
     <Fragment>
       <button className={`product-button ${className}`} onClick={addToCart}>
-        {isMobile ? <span> <span> +</span> cart</span> : "Add to Cart"}
+        {isMobile ? (
+          <span>
+            <span> +</span> cart
+          </span>
+        ) : (
+          'Add to Cart'
+        )}
       </button>
     </Fragment>
   );
