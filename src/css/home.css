@@ -228,12 +228,14 @@ pointer-events: all;
     width: 100% !important;
     object-fit: contain !important;
   }
-/* .product-card{
-
-} */
+.product-card{
+  text-align: center !important;
+  display: flex !important;
+  flex-wrap: nowrap !important;
+}
   .product-card .product-card-content{
  /* width: 100% !important; */
- width: 70% !important;
+ width: 50% !important;
  /* background-color: aqua; */
  /* display: none; */
   }
@@ -243,6 +245,7 @@ pointer-events: all;
   .new-arrival-header h3{
     font-size: 14px;
   }
-
+ 
 }
+
 
