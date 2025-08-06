@@ -17,19 +17,19 @@ const AddToCart = ({ product, className = "" }) => {
   };
 
 useEffect(() => {
-    const checkIsMobile = () => {
-      if (typeof window !== "undefined") {
-        setIsMobile(window.innerWidth < 768);
-      }
-    };
+  const checkIsMobile = () => {
+    if (typeof window !== "undefined") {
+      setIsMobile(window.innerWidth < 768);
+    }
+  };
 
-    checkIsMobile(); // run on mount
-    window.addEventListener('resize', checkIsMobile);
+  checkIsMobile(); // run once on mount
+  window.addEventListener('resize', checkIsMobile);
 
-    return () => {
-      window.removeEventListener('resize', checkIsMobile);
-    };
-  }, [isMobile]);
+  return () => {
+    window.removeEventListener('resize', checkIsMobile);
+  };
+}, []); 
 
   return (
     <Fragment>
